@@ -59,23 +59,35 @@ export default function MovieFormPage() {
           data-testid="movie-form"
         >
           <div>
-            <Label htmlFor="title">Título</Label>
+            <Label htmlFor="title" data-testid="test-form-name-label">
+              Título
+            </Label>
             <Input
               name="title"
               id="title"
               placeholder="Título de la película"
+              data-testid="test-title-form"
             />
           </div>
 
           <div>
-            <Label htmlFor="release">Fecha de estreno</Label>
-            <Input name="release" id="release" type="date" />
+            <Label htmlFor="release" data-testid="test-form-release-label">
+              Fecha de estreno
+            </Label>
+            <Input
+              name="release"
+              id="release"
+              type="date"
+              data-testid="test-form-release-date"
+            />
           </div>
 
           <div>
-            <Label htmlFor="genre">Género</Label>
+            <Label htmlFor="genre" data-testid="test-form-message-label">
+              Género
+            </Label>
             <Select value={genreValue} onValueChange={setGenreValue}>
-              <SelectTrigger id="genre">
+              <SelectTrigger id="genre" data-testid="test-form-message-input">
                 <SelectValue placeholder="Selecciona un género" />
               </SelectTrigger>
               <SelectContent>
@@ -93,6 +105,7 @@ export default function MovieFormPage() {
               name="overview"
               id="overview"
               placeholder="Resumen de la película..."
+              data-testid="test-form-overview-input"
             />
           </div>
 
@@ -102,7 +115,7 @@ export default function MovieFormPage() {
             </p>
           )}
 
-          <Button type="submit" data-testid="submit-button">
+          <Button type="submit" data-testid="test-submit-button">
             Enviar
           </Button>
         </form>
