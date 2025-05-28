@@ -90,8 +90,9 @@ export default function HomePage() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+              data-testid="test-search-input"
             />
-            <Button onClick={handleSearch}>Buscar</Button>
+            <Button onClick={handleSearch} data-testid="test-search-button">Buscar</Button>
             {searching && (
               <Button variant="ghost" onClick={clearSearch}>
                 Limpiar
@@ -147,8 +148,8 @@ export default function HomePage() {
               }}
             >
               <TabsList>
-                <TabsTrigger value="day">Hoy</TabsTrigger>
-                <TabsTrigger value="week">Esta Semana</TabsTrigger>
+                <TabsTrigger value="day" data-testid="test-hoy">Hoy</TabsTrigger>
+                <TabsTrigger value="week" data-testid="test-semana">Esta Semana</TabsTrigger>
               </TabsList>
             </Tabs>
           </div>

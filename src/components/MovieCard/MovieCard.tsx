@@ -23,7 +23,7 @@ export default function MovieCard({
       : "bg-red-500";
 
   return (
-    <div className="relative min-w-[180px] max-w-[180px] rounded-2xl overflow-hidden shadow-lg group border">
+    <div className="relative min-w-[180px] max-w-[180px] rounded-2xl overflow-hidden shadow-lg group border" data-testid="test-movie-card">
       {/* Imagen de fondo */}
       <div className="relative h-96">
         <Image

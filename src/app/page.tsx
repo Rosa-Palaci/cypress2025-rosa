@@ -58,7 +58,7 @@ export default function HomePage() {
             <h2 className="text-xl font-semibold">🤷🏻‍♂️ Oh-Oh</h2>
             <p>Not found</p>
             <Link href="/lo-que-sea">
-              <Button data-testid="go-to-interactions">Ir a 404</Button>
+              <Button data-testid="go-to-404">Ir a 404</Button>
             </Link>
           </CardContent>
         </Card>

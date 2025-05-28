@@ -25,12 +25,12 @@ export default function Header() {
   }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b px-4 py-2 flex items-center justify-between bg-white">
+    <header className="sticky top-0 z-50 w-full border-b px-4 py-2 flex items-center justify-between bg-white" data-testid="header">
       <Link href="/" className="text-xl font-semibold">
         Cypress Tests
       </Link>
 
-      <nav className="hidden md:flex space-x-4">
+      <nav className="hidden md:flex space-x-4" data-testid="nav-desktop">
         {navItems.map(({ href, label }) => (
           <Link
             key={href}
